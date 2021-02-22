@@ -24,17 +24,19 @@ public class Cinema implements Serializable{
 	@GeneratedValue
 	@Column(name="id")
 	private Long id;
-	
+	@Column(name="name")
 	private String name;
 	
 
 	@OneToOne
 	@JoinColumn(name="id_direccion")
+	@Column(name="direction")
 	private Direction direction;
-	
+	@Column(name="schudule")
 	private String schedule;
-	
+	@Column(name="rooms")
 	private Integer rooms;
+	@Column(name ="postalCode")
 	private Integer postalCode;
 	
 	@ManyToMany(mappedBy="cinemas")
