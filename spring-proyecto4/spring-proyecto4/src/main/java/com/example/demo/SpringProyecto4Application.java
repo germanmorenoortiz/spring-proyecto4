@@ -32,7 +32,8 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		Cinema cinema1 = new Cinema("Nativo", "Avda.Grande 4","enero", 4, 09005);
 		//cinema1.setcinema1(cinema);
 		cinemaRepository.save(cinema1);
-
+		Cinema cinema2 = new Cinema("Carrefour","C/Dos Santo bajo","marzo",7,09578);
+		cinemaRepository.save(cinema2);
 	}
 
 }
