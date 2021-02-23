@@ -68,8 +68,7 @@ public class Movie implements Serializable{
 	public void setCinemas(List<Cinema> cinemas) {
 		this.cinemas = cinemas;
 	}
-	
-	
+		
 	
 
 }
