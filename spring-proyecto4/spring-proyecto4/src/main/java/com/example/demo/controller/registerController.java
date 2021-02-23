@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import javax.servlet.http.HttpSession;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 import com.example.demo.entities.User;
 import com.example.demo.repository.UserRepository;
 
 @Controller
-public class LoginController {
+public class registerController {
 
 	@Autowired
 	private UserRepository userRepository;
@@ -23,20 +24,16 @@ public class LoginController {
 	 * @param model
 	 * @return
 	 */
-	@GetMapping("/login")
-	public String getLogin(Model model) {
+	@GetMapping("/register")
+	public String getRegister(Model model) {
 		model.addAttribute(new User());
-		return "login";
+		return "register";
 	}
 	
-	@PostMapping("/login")
-	public String login(@ModelAttribute User user, HttpSession session) {
-		User userDB = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
-		
-		if (userDB == null) {
-			return "redirect:/register";
-		}
-		session.setAttribute("user", userDB);
-		return "redirect:/cinemas";
+	@PostMapping("/register")
+	public String save(@ModelAttribute("user") User user) {				
+		userRepository.save(user);
+		return "redirect:/login";
 	}
+	
 }

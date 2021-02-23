@@ -12,7 +12,7 @@
 <body>
 	
 	<div class = "pt-5 container">
-			<h2>User ${user.id}</h2>
+			<h2>Register User</h2>
 			<hr>
 		<div class = " row justify-content-center">
 
@@ -20,21 +20,25 @@
 			
 			
 			
-				<form:form action = "${pageContext.request.contextPath}/login" method="POST" modelAttribute="user">
+				<form:form action = "${pageContext.request.contextPath}/register" method="POST" modelAttribute="user">
 				
 					<div class="form-group">
-						<label for="name">email</label>
+						<label for="email">email</label>
 						<form:input path="email" class="form-control" />
 					</div>
 					
 					<div class="form-group">
-						<label for="description">Password</label>
+						<label for="password">Password</label>
 						<form:password path="password" class="form-control"/>
 					</div>
 					
+					<div class="form-group">
+						<label for="rol">rol</label>
+						<form:input path="rol" class="form-control"/>
+					</div>
 					
 					
-					<button class = "btn btn-success btn-lg" type = "submit" >Iniciar sesión</button>
+					<button class = "btn btn-success btn-lg" type = "submit" >save</button>
 
 				
 				</form:form>
