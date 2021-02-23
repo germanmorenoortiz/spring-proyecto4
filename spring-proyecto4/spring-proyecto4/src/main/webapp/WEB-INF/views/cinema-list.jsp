@@ -15,6 +15,18 @@
 		<h1>Cinemas</h1>
 		<hr/>
 		
+		<c:choose>
+			<c:when test="${user.rol =='admin'}">
+				Bienvenido <c:out value="${user.email}"></c:out> eres admin
+			</c:when>
+			<c:when test="${user.rol == 'normal' }">
+				Bienvenido <c:out value="${user.email}"></c:out> eres usuario normal sin permisos
+			</c:when>
+			<c:otherwise>
+
+			</c:otherwise>
+		</c:choose>
+		
 		<p>${NOTIFICATION}</p>
 		
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->

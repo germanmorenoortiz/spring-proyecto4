@@ -29,7 +29,7 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		
 		// Crear datos de prueba.
 		
-		User user1 = new User("german@gmail.com","1234");
+		User user1 = new User("german@gmail.com","1234","admin");
 		userRepository.save(user1);
 	}
 
