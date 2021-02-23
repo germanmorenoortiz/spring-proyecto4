@@ -29,11 +29,13 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		
 		// Crear datos de prueba.
 		
-		Cinema cinema1 = new Cinema("Nativo", "Avda.Grande 4","enero", 4, 09005);
-		//cinema1.setcinema1(cinema);
+		Cinema cinema1 = new Cinema("Nativo", null, null, null, null, null, null);
+		//cinema1.setCinema(cinema1);
 		cinemaRepository.save(cinema1);
-		Cinema cinema2 = new Cinema("Carrefour","C/Dos Santo bajo","marzo",7,09578);
+		Cinema cinema2 = new Cinema("Carrefour", null, null, null, null, null, null);
 		cinemaRepository.save(cinema2);
+		Cinema cinema3 = new Cinema("Lorel", null, null, null, null, null, null);
+		cinemaRepository.save(cinema3);
 	}
 
 }

@@ -30,7 +30,7 @@ public class Cinema implements Serializable{
 
 	@OneToOne
 	@JoinColumn(name="id_direccion")
-	@Column(name="direction")
+	
 	private Direction direction;
 	@Column(name="schudule")
 	private String schedule;
@@ -41,6 +41,7 @@ public class Cinema implements Serializable{
 	
 	@ManyToMany(mappedBy="cinemas")
 	private List<Movie> movies = new ArrayList<>();
+	@ManyToMany(mappedBy="cinemas")
 	private List<User> user =new ArrayList<>();
 	public Cinema() {}
 
@@ -110,6 +111,14 @@ public class Cinema implements Serializable{
 
 	public void setSchedule(String schedule) {
 		this.schedule = schedule;
+	}
+
+	public List<User> getUser() {
+		return user;
+	}
+
+	public void setUser(List<User> user) {
+		this.user = user;
 	}
 
 }
