@@ -40,9 +40,9 @@ public class Cinema implements Serializable{
 	private Integer postalCode;
 	
 	@ManyToMany(mappedBy="cinemas")
-	private List<Movie> movies = new ArrayList<>();
+	private List<Movie> movies = new ArrayList<Movie>();
 	@ManyToMany(mappedBy="cinemas")
-	private List<User> user =new ArrayList<>();
+	private List<User> user =new ArrayList<User>();
 	public Cinema() {}
 
 	public Cinema(String name, Direction direction, String schedule, Integer rooms, Integer postalCode,
