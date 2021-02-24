@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Product Edition | Aswesome App</title>
+<title>Cartelera-CineApp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
@@ -31,6 +31,7 @@
 						<label for="description">Password</label>
 						<form:password path="password" class="form-control"/>
 					</div>
+					
 					
 					
 					<button class = "btn btn-success btn-lg" type = "submit" >Iniciar sesión</button>
