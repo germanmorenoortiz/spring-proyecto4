@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -39,9 +38,9 @@ public class Cinema implements Serializable{
 	@Column(name ="postalCode")
 	private Integer postalCode;
 	
-	@ManyToMany(mappedBy="cinemas")
+	@ManyToMany(mappedBy="cinema")
 	private List<Movie> movies = new ArrayList<Movie>();
-	@ManyToMany(mappedBy="cinemas")
+	@ManyToMany(mappedBy="cinema")
 	private List<User> user =new ArrayList<User>();
 	public Cinema() {}
 
@@ -120,5 +119,12 @@ public class Cinema implements Serializable{
 	public void setUser(List<User> user) {
 		this.user = user;
 	}
+
+	@Override
+	public String toString() {
+		return "Cinema [id=" + id + ", name=" + name + ", direction=" + direction + ", schedule=" + schedule
+				+ ", rooms=" + rooms + ", postalCode=" + postalCode + ", movies=" + movies + ", user=" + user + "]";
+	}
+	
 
 }

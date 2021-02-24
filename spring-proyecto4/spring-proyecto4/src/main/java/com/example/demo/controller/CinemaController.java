@@ -24,42 +24,42 @@ public class CinemaController {
 	@Autowired
 	private CinemaRepository cinemaRepository;
 	
-	@GetMapping("/cinemas")
-	public String findCinemas(Model model, HttpSession session) {
+	@GetMapping("/cinema")
+	public String findCinema(Model model, HttpSession session) {
 		Cinema cinema1 = (Cinema) session.getAttribute("cinemas");
 		if(cinema1 != null)
-			model.addAttribute("cinemas", cinema1);
+			model.addAttribute("cinema", cinema1);
 		
-		model.addAttribute("cinemas", cinemaRepository.findAll());
+		model.addAttribute("cinema", cinemaRepository.findAll());
 		return "cinema-list";
 	}
 	
 	
-	@GetMapping("/cinemas/search/{postalCode}")
-	public String filterCinemasByPostalCode(Model model) {
+	@GetMapping("/cinema/search/{postalCode}")
+	public String filterCinemaByPostalCode(Model model) {
 //		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
-	@GetMapping("/cinemas/new")
+	@GetMapping("/cinema/new")
 	public String newCinema(Model model) {
 		model.addAttribute("cinema", new Cinema());
 		return "cinema-edit";
 		
 	}
-	@GetMapping("/cinemas/{id}/edit")
+	@GetMapping("/cinema/{id}/edit")
 	public String editCinema(@PathVariable Long id, Model model) {
-		model.addAttribute("cinemas", cinemaRepository.findById(id).get());
+		model.addAttribute("cinema", cinemaRepository.findById(id).get());
 		return "cinema-edit";
 	}
-	@GetMapping("/cinemas/{id}/delete")
-	public String deleteCinemas(@PathVariable Long id) {
+	@GetMapping("/cinema/{id}/delete")
+	public String deleteCinema(@PathVariable Long id) {
 		cinemaRepository.deleteById(id);
-		return "redirect:/cinemas";
+		return "redirect:/cinema";
 	}
 	
-	@GetMapping("/cinemas/delete")
-	public String deleteCinemas() {
+	@GetMapping("/cinema/delete")
+	public String deleteCinema() {
 		cinemaRepository.deleteAll();
-		return "redirect:/cinemas";
+		return "redirect:/cinema";
 	}
 }
