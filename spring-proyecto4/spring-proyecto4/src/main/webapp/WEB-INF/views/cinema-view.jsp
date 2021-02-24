@@ -17,14 +17,14 @@
 					<p><b>Name</b>: ${cinema.name}</p>
 					<p><b>Direction</b>: ${cinema.direction}</p>
 					<p><b>Schudule</b>: ${cinema.schudule}</p>
-					<p><b>Room</b>: ${product.room}</p>
+					<p><b>Room</b>: ${cinema.room}</p>
 					<p><b>PostalCode</b>: ${cinema.postalCode}</p>
 					
 					
 			<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/view">Ver</a> 
-						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/edit">Editar</a> 
-						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/delete">Borrar</a>
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 
+						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/delete">Borrar</a>
 						 
 					</td>
 			</div>
