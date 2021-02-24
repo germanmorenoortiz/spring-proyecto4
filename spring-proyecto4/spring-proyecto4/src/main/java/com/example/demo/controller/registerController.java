@@ -20,7 +20,7 @@ public class registerController {
 	private UserRepository userRepository;
 	
 	/**
-	 * Método para cargar la vista login
+	 * Método para registrar usuarios
 	 * @param model
 	 * @return
 	 */

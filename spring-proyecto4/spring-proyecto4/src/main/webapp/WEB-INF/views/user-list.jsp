@@ -28,16 +28,25 @@
 		</c:choose>
 		
 		<p>${NOTIFICATION}</p>
+
+		
+		<p>
+			<c:if test="${user.rol == 'admin' }">
+				<a class = "btn btn-primary" href="${pageContext.request.contextPath}/users/new">ADD USER</a>
+			</c:if>
+			
+		</p>
 		
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->
 
 		<p>
-			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/users/new">ADD USER</a>
+		   
+			<!--<a class = "btn btn-primary" href="${pageContext.request.contextPath}/users/new">ADD USER</a> -->
 			<!-- <a class = "btn btn-danger" href="${pageContext.request.contextPath}/users/delete/all">DELETE USER</a> -->
 			
 		</p>
 	
-<!-- 	FILTRO CÓDIGO POSTAL -->
+
 
 
 
