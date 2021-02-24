@@ -32,10 +32,10 @@
 						<form:password path="password" class="form-control"/>
 					</div>
 					
-					<div class="form-group">
-						<label for="rol">rol</label>
-						<form:input path="rol" class="form-control"/>
-					</div>
+<!-- 					<div class="form-group"> -->
+<!-- 						<label for="rol">rol</label> -->
+<%-- 						<form:input path="rol" class="form-control"/> --%>
+<!-- 					</div> -->
 					
 					
 					<button class = "btn btn-success btn-lg" type = "submit" >save</button>

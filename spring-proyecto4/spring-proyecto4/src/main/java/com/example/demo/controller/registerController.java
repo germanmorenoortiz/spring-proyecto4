@@ -31,7 +31,8 @@ public class registerController {
 	}
 	
 	@PostMapping("/register")
-	public String save(@ModelAttribute("user") User user) {				
+	public String save(@ModelAttribute("user") User user) {		
+		user.setRol("normal");
 		userRepository.save(user);
 		return "redirect:/login";
 	}
