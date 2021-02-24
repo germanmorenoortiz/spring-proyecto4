@@ -34,7 +34,7 @@
 					
 <!-- 					<div class="form-group"> -->
 <!-- 						<label for="rol">rol</label> -->
-<%-- 						<form:input path="rol" class="form-control"/> --%>
+<!-- 						<form:input path="rol" class="form-control"/> --%>
 <!-- 					</div> -->
 					
 					
