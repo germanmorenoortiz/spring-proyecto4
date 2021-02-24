@@ -23,7 +23,7 @@ public class CinemaController {
 	
 	@GetMapping("/cinemas")
 	public String findCinemas(Model model) {
-	
+		
 		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
