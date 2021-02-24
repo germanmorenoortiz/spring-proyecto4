@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entities.Cinema;
+import com.example.demo.entities.Movie;
 import com.example.demo.entities.User;
 import com.example.demo.repository.CinemaRepository;
 
@@ -34,6 +35,11 @@ public class CinemaController {
 //		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
-	
+	@GetMapping("/cinema/new")
+	public String newCinema(Model model) {
+		model.addAttribute("cinema", new Cinema());
+		return "cinema-edit";
+		
+	}
 	
 }
