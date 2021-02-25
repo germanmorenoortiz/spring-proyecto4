@@ -63,11 +63,17 @@ public class CinemaController {
 //		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
-	@GetMapping("/cinema/new")
+	@GetMapping("/cinemas/new")
 	public String newCinema(Model model) {
 		model.addAttribute("cinema", new Cinema());
 		return "cinema-edit";
 		
 	}
 	
+	// CREAR MÉTODO @POST
+	@PostMapping("/cinemas")
+	public String editCinema(@ModelAttribute Cinema cinema, Model model) {
+		cinemaRepository.save(cinema);
+		return "cinema-list";
+	}
 }
