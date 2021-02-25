@@ -53,10 +53,10 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		cinemaRepository.save(cinema2);
 		
 		Cinema cinema3 = new Cinema();
-		cinema2.setName("Marte");
-		cinema2.setRooms(7);
-		cinema2.setPostalCode(92547);
-		cinema2.setSchedule("H 9-20");
+		cinema3.setName("Marte");
+		cinema3.setRooms(7);
+		cinema3.setPostalCode(92547);
+		cinema3.setSchedule("H 9-20");
 		cinemaRepository.save(cinema3);
 		//List<Movie> movies = Arrays.asList(movie1, movie2);
 		//List<User> user =Arrays.asList(user1,user2);
