@@ -27,7 +27,7 @@ public class User implements Serializable{
 	
 	private String password;
 	
-	// private String rol;
+    private String rol;
 	
 	@ManyToMany
 	@JoinTable(name = "user_cinema",
@@ -37,10 +37,11 @@ public class User implements Serializable{
 	
 	public User() {};
 
-	public User(String email, String password) {
+	public User(String email, String password, String rol) {
 		super();
 		this.email = email;
 		this.password = password;
+		this.rol = rol;
 	}
 
 	public Long getId() {
@@ -75,9 +76,14 @@ public class User implements Serializable{
 		this.cinemas = cinemas;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", cinemas=" + cinemas + "]";
+	
+
+	public String getRol() {
+		return rol;
+	}
+
+	public void setRol(String rol) {
+		this.rol = rol;
 	};
 		
 		

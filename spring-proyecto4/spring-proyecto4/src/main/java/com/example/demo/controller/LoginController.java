@@ -32,8 +32,11 @@ public class LoginController {
 	@PostMapping("/login")
 	public String login(@ModelAttribute User user, HttpSession session) {
 		User userDB = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
+		
+		if (userDB == null) {
+			return "redirect:/register";
+		}
 		session.setAttribute("user", userDB);
-		System.out.println(userDB);
 		return "redirect:/cinemas";
 	}
 }

@@ -59,6 +59,11 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		//List<Movie> movies = Arrays.asList(movie1, movie2);
 		//List<User> user =Arrays.asList(user1,user2);
 		
+		User user1 = new User("german@gmail.com","1234","admin");
+		userRepository.save(user1);
+		
+		User user2 = new User("oscar@gmail.com","1234","normal");
+		userRepository.save(user2);
 	}
 
 }
