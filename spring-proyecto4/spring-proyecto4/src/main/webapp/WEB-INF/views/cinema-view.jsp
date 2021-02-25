@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Cinema View |CinemaApp</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 <div class = "pt-5 container">
@@ -14,19 +15,18 @@
 		<div class = " row justify-content-center">
 
 			<div class = "col-md-8 mb-5">
-					<p><b>Name</b>: ${cinema.name}</p>
-					<p><b>Direction</b>: ${cinema.direction}</p>
-					<p><b>Schudule</b>: ${cinema.schudule}</p>
-					<p><b>Room</b>: ${product.room}</p>
-					<p><b>PostalCode</b>: ${cinema.postalCode}</p>
+					<p>Name: ${cinema.name}</p>
+					<p>Schedule: ${cinema.schedule}</p>
+					<p>Room: ${cinema.rooms}</p>
+					<p>PostalCode: ${cinema.postalCode}</p>
 					
 					
-			<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/view">Ver</a> 
-						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/edit">Editar</a> 
-						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/delete">Borrar</a>
+			        
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas">Volver</a> 
+						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 
+						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/delete">Borrar</a>
 						 
-					</td>
+					
 			</div>
 
 		</div>

@@ -28,11 +28,8 @@ public class Cinema implements Serializable{
 	private String name;
 	
 
-	@OneToOne
-	@JoinColumn(name="id_direccion")
 	
-	private Direction direction;
-	@Column(name="schudule")
+	@Column(name="schedule")
 	private String schedule;
 	@Column(name="rooms")
 	private Integer rooms;
@@ -49,7 +46,6 @@ public class Cinema implements Serializable{
 			List<Movie> movies, List<User> user) {
 		super();
 		this.name = name;
-		this.direction = direction;
 		this.schedule = schedule;
 		this.rooms = rooms;
 		this.postalCode = postalCode;
@@ -81,14 +77,7 @@ public class Cinema implements Serializable{
 		this.name = name;
 	}
 
-	public Direction getDirection() {
-		return direction;
-	}
-
-	public void setDirection(Direction direction) {
-		this.direction = direction;
-	}
-
+	
 	public Integer getRooms() {
 		return rooms;
 	}

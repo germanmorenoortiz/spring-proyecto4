@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cinema  Edition | Aswesome App</title>
+<title>Cinema  Edition | Cinema App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
@@ -27,14 +27,10 @@
 						<form:input path="name" class="form-control" />
 					</div>
 					
-					<div class="form-group">
-						<label for="direction">Direction</label>
-						<form:textarea path="direction" class="form-control"/>
-					</div>
 					
 					<div class="form-group">
-						<label for="schudule">schudule</label>
-						<form:input path="schudule" class="form-control" />
+						<label for="schedule">schedule</label>
+						<form:input path="schedule" class="form-control" />
 					</div>
 					
 					<div class="form-group">
@@ -46,9 +42,9 @@
 						<form:input path="postalCode" class="form-control" />
 					</div>
 					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/view">Ver</a> 
-						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/edit">Editar</a> 
-						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/delete">Borrar</a>
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 
+						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/delete">Borrar</a>
 						 
 					</td>
 					<form:hidden path="id"/>
@@ -65,7 +61,7 @@
 			</div>
 		</div>
 	</div>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
