@@ -13,6 +13,7 @@ import com.example.demo.entities.Cinema;
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.User;
 import com.example.demo.repository.CinemaRepository;
+import com.example.demo.repository.UserRepository;
 
 
 
@@ -23,7 +24,8 @@ public class SpringProyecto4Application implements CommandLineRunner{
 	
 	@Autowired
 	private CinemaRepository cinemaRepository;
-	
+	@Autowired
+	private UserRepository userRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringProyecto4Application.class, args);
