@@ -24,42 +24,52 @@ public class CinemaController {
 	@Autowired
 	private CinemaRepository cinemaRepository;
 	
-	@GetMapping("/cinema")
-	public String findCinema(Model model, HttpSession session) {
-		Cinema cinema1 = (Cinema) session.getAttribute("cinemas");
-		if(cinema1 != null)
-			model.addAttribute("cinema", cinema1);
-		
+	@GetMapping("/cinemas")
+	public String findCinemas(Model model) {
 		model.addAttribute("cinema", cinemaRepository.findAll());
 		return "cinema-list";
 	}
+	@GetMapping("/cinemas/{id}/view")
+	public String viewCinema(@PathVariable Long id, Model model) {
+		Optional<Cinema> cinemaOpt = cinemaRepository.findById(id);
+		if (!cinemaOpt.isPresent()) {
+			model.addAttribute("cinema", cinemaOpt.get());
+			return "cinema-view";
+		}
+		model.addAttribute("error", "No existe el cinema solicitado");
+		return "redirect:/cinemas";
+	}
 	
-	
-	@GetMapping("/cinema/search/{postalCode}")
+	@GetMapping("/cinemas/search/{postalCode}")
 	public String filterCinemaByPostalCode(Model model) {
 //		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
-	@GetMapping("/cinema/new")
+	@GetMapping("/cinemas/new")
 	public String newCinema(Model model) {
 		model.addAttribute("cinema", new Cinema());
 		return "cinema-edit";
 		
 	}
-	@GetMapping("/cinema/{id}/edit")
+	@GetMapping("/cinemas/{id}/edit")
 	public String editCinema(@PathVariable Long id, Model model) {
 		model.addAttribute("cinema", cinemaRepository.findById(id).get());
 		return "cinema-edit";
 	}
-	@GetMapping("/cinema/{id}/delete")
+	@GetMapping("/cinemas/{id}/delete")
 	public String deleteCinema(@PathVariable Long id) {
 		cinemaRepository.deleteById(id);
 		return "redirect:/cinema";
 	}
 	
-	@GetMapping("/cinema/delete")
+	@GetMapping("/cinemas/delete")
 	public String deleteCinema() {
 		cinemaRepository.deleteAll();
 		return "redirect:/cinema";
+	}
+	@PostMapping("/cinemas")
+	public String editCinema(@ModelAttribute Cinema cinema, Model model) {
+		cinemaRepository.save(cinema);
+		return "cinema-list";
 	}
 }

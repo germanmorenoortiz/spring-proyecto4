@@ -17,7 +17,7 @@
 					<p><b>Name</b>: ${cinema.name}</p>
 					<p><b>Direction</b>: ${cinema.direction}</p>
 					<p><b>Schudule</b>: ${cinema.schudule}</p>
-					<p><b>Room</b>: ${cinema.room}</p>
+					<p><b>Rooms</b>: ${cinema.rooms}</p>
 					<p><b>PostalCode</b>: ${cinema.postalCode}</p>
 					
 					

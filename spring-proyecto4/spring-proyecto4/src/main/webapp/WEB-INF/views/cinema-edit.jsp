@@ -46,9 +46,9 @@
 						<form:input path="postalCode" class="form-control" />
 					</div>
 					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/view">Ver</a> 
-						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/edit">Editar</a> 
-						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${movie.id}/delete">Borrar</a>
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 
+						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/delete">Borrar</a>
 						 
 					</td>
 					<form:hidden path="id"/>

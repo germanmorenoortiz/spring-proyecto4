@@ -38,9 +38,9 @@ public class Cinema implements Serializable{
 	@Column(name ="postalCode")
 	private Integer postalCode;
 	
-	@ManyToMany(mappedBy="cinema")
+	@ManyToMany(mappedBy="cinemas")
 	private List<Movie> movies = new ArrayList<Movie>();
-	@ManyToMany(mappedBy="cinema")
+	@ManyToMany(mappedBy="cinemas")
 	private List<User> user =new ArrayList<User>();
 	public Cinema() {}
 
@@ -122,9 +122,12 @@ public class Cinema implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Cinema [id=" + id + ", name=" + name + ", direction=" + direction + ", schedule=" + schedule
-				+ ", rooms=" + rooms + ", postalCode=" + postalCode + ", movies=" + movies + ", user=" + user + "]";
+		return "Cinema [id=" + id + ", name=" + name + ", schedule=" + schedule + ", rooms=" + rooms + ", postalCode="
+				+ postalCode + "]";
 	}
+
+	
+	
 	
 
 }
