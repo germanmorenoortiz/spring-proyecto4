@@ -69,7 +69,11 @@ public class CinemaController {
 		return "cinema-edit";
 		
 	}
-	
+	@GetMapping("/cinemas/{id}/delete")
+	public String deleteCinema(@PathVariable Long id) {
+		cinemaRepository.deleteById(id);
+		return "redirect:/cinemas";
+	}
 	// CREAR MÉTODO @POST
 	@PostMapping("/cinemas")
 	public String editCinema(@ModelAttribute Cinema cinema, Model model) {
