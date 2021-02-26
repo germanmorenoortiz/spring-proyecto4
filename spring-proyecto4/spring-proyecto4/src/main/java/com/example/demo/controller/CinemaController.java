@@ -47,7 +47,7 @@ public class CinemaController {
 	@GetMapping("/cinemas/{id}/edit")
 	public String editarCinema(@PathVariable Long id, Model model) {
 		if(id == null) // 1. se comprueba que el id no sea nulo
-			return "redirect:/cinema";
+			return "redirect:/cinemas";
 		
 		Optional<Cinema> cinemaOpt = cinemaRepository.findById(id);
 		if (cinemaOpt.isPresent()) { // 2. se comprueba que existe un producto para ese id

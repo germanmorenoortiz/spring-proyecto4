@@ -37,7 +37,7 @@ public class UserController {
 	@GetMapping("/users/{id}/view")
 	public String verUser(@PathVariable Long id, Model model) {
 		if(id == null) // 1. se comprueba que el id no sea nulo
-			return "redirect:/user";
+			return "redirect:/users";
 		
 		Optional<User> userOpt = userRepository.findById(id);
 		if (userOpt.isPresent()) { // 2. se comprueba que existe un cinema para ese id
@@ -51,7 +51,7 @@ public class UserController {
 	@GetMapping("/users/{id}/edit")
 	public String editarUser(@PathVariable Long id, Model model) {
 		if(id == null) // 1. se comprueba que el id no sea nulo
-			return "redirect:/user";
+			return "redirect:/users";
 		
 		Optional<User> userOpt = userRepository.findById(id);
 		if (userOpt.isPresent()) { // 2. se comprueba que existe un  usuario para ese id
@@ -59,7 +59,7 @@ public class UserController {
 			return "user-edit";
 		}
 		model.addAttribute("error", "No existe el usuario solicitado");
-		return "redirect:/user";
+		return "redirect:/users";
 	}
 	
 	@GetMapping("/users/new")
