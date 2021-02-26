@@ -17,11 +17,12 @@
 			<div class = "col-md-8 mb-5">
 					<p>Email: ${user.email}</p>
 					<p>Password: ${user.password}</p>
+					<p>Rol: ${user.rol}</p>
 					
 					
 					
 			        
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/Users/">Volver</a> 
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/Users">Volver</a> 
 						<a class="btn btn-success" href = "${pageContext.request.contextPath}/Users/${user.id}/edit">Editar</a> 
 						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/Users/${user.id}/delete">Borrar</a>
 						 

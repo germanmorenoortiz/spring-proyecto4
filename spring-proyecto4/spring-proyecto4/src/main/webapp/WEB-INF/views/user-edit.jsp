@@ -23,14 +23,19 @@
 				<form:form action = "${pageContext.request.contextPath}/users" method="POST" modelAttribute="user">
 				
 					<div class="form-group">
-						<label for="name">Email</label>
+						<label for="email">Email</label>
 						<form:input path="email" class="form-control" />
 					</div>
 					
 					
 					<div class="form-group">
-						<label for="schedule">password</label>
+						<label for="passwprd">password</label>
 						<form:input path="password" class="form-control" />
+					</div>
+					
+					<div class="form-group">
+						<label for="rol">rol</label>
+						<form:input path="rol" class="form-control" />
 					</div>
 					
 					
