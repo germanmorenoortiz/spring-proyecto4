@@ -4,11 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Movies List | Awesome App</title>
+<title>Movies List | CinemaApp</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 	
 	<div class = "pt-5 container">
 		
@@ -32,8 +33,8 @@
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->
 
 		<p>
-			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/cinemas/new">ADD 	MOVIES</a>
-			<a class = "btn btn-danger" href="${pageContext.request.contextPath}/cinemas/delete/all">DELETE MOVIES</a>
+			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/movies/new">ADD 	MOVIES</a>
+			<a class = "btn btn-danger" href="${pageContext.request.contextPath}/movies/delete/all">DELETE MOVIES</a>
 			
 		</p>
 	

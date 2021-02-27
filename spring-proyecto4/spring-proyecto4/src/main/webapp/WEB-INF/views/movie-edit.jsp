@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 	
 	<div class = "pt-5 container">
 			<h2>Movie ${movie.id}</h2>
@@ -20,7 +21,7 @@
 			
 			
 			
-				<form:form action = "${pageContext.request.contextPath}/cinemas" method="POST" modelAttribute="cinema">
+				<form:form action = "${pageContext.request.contextPath}/movies" method="POST" modelAttribute="movie">
 				
 					<div class="form-group">
 						<label for="title">Title</label>
@@ -30,7 +31,7 @@
 					
 					<div class="form-group">
 						<label for="duration">Duration</label>
-						<form:input path="schedule" class="form-control" />
+						<form:input path="duration" class="form-control" />
 					</div>
 					
 		

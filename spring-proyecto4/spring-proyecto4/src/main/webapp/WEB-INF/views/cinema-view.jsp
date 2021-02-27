@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 <div class = "pt-5 container">
 			<h2>Cinema ${cinema.id}</h2>
 			<hr>

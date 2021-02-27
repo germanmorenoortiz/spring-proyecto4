@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 	
 	<div class = "pt-5 container">
 		

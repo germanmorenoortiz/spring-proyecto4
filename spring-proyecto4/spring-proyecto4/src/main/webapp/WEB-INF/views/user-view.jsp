@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 <div class = "pt-5 container">
 			<h2>User ${user.id}</h2>
 			<hr>
@@ -22,9 +23,9 @@
 					
 					
 			        
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/Users">Volver</a> 
-						<a class="btn btn-success" href = "${pageContext.request.contextPath}/Users/${user.id}/edit">Editar</a> 
-						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/Users/${user.id}/delete">Borrar</a>
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/users">Volver</a> 
+						<a class="btn btn-success" href = "${pageContext.request.contextPath}/users/${user.id}/edit">Editar</a> 
+						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/users/${user.id}/delete">Borrar</a>
 						 
 					
 			</div>

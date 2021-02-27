@@ -5,18 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Movie View |MovieApp</title>
+<title>Movie View |CinemaApp</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 <div class = "pt-5 container">
 			<h2>Movie ${movie.id}</h2>
 			<hr>
 		<div class = " row justify-content-center">
 
 			<div class = "col-md-8 mb-5">
-					<p>Title: ${movie.email}</p>
-					<p>Duration: ${movie.password}</p>
+					<p>Title: ${movie.title}</p>
+					<p>Duration: ${movie.duration}</p>
 					
 					
 					
