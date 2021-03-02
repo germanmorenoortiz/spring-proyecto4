@@ -61,7 +61,7 @@
 					<td>${cinema.rooms}</td>
 							
 					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/movies/${movies.id}/view">Ver peliculas</a> 
 						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 
 						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/delete">Borrar</a>
 						 
