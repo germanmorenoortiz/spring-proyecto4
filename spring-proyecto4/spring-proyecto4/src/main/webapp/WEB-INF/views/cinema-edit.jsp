@@ -42,6 +42,11 @@
 						<label for="postalCode">postalCode</label>
 						<form:input path="postalCode" class="form-control" />
 					</div>
+					<h3 class="mt-3 mb-3">Movies Disponibles.</h3>
+					<div class="form-group">
+						<label for="movies">Movies</label>
+						<form:select class="form-select form-select-lg mb-3" path="movies" items="${movies}" itemLabel="title" itemValue="id"></form:select>
+					</div>
 					<td> 
 						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
 						<a class="btn btn-success" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/edit">Editar</a> 

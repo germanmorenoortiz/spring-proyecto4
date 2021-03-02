@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -36,7 +37,10 @@ public class Cinema implements Serializable{
 	@Column(name ="postalCode")
 	private Integer postalCode;
 	
-	@ManyToMany(mappedBy="cinemas")
+	@ManyToMany
+	@JoinTable(name = "cinema_movie",
+	joinColumns = @JoinColumn(name = "cinema_id", referencedColumnName = "id"),
+	inverseJoinColumns = @JoinColumn(name = "movie_id", referencedColumnName = "id"))
 	private List<Movie> movies = new ArrayList<Movie>();
 	@ManyToMany(mappedBy="cinemas")
 	private List<User> user =new ArrayList<User>();
@@ -51,14 +55,6 @@ public class Cinema implements Serializable{
 		this.postalCode = postalCode;
 		this.movies = movies;
 		this.user = user;
-	}
-
-	public Integer getPostalCode() {
-		return postalCode;
-	}
-
-	public void setPostalCode(Integer postalCode) {
-		this.postalCode = postalCode;
 	}
 
 	public Long getId() {
@@ -77,7 +73,14 @@ public class Cinema implements Serializable{
 		this.name = name;
 	}
 
-	
+	public String getSchedule() {
+		return schedule;
+	}
+
+	public void setSchedule(String schedule) {
+		this.schedule = schedule;
+	}
+
 	public Integer getRooms() {
 		return rooms;
 	}
@@ -86,20 +89,20 @@ public class Cinema implements Serializable{
 		this.rooms = rooms;
 	}
 
+	public Integer getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(Integer postalCode) {
+		this.postalCode = postalCode;
+	}
+
 	public List<Movie> getMovies() {
 		return movies;
 	}
 
 	public void setMovies(List<Movie> movies) {
 		this.movies = movies;
-	}
-	
-	public String getSchedule() {
-		return schedule;
-	}
-
-	public void setSchedule(String schedule) {
-		this.schedule = schedule;
 	}
 
 	public List<User> getUser() {
@@ -110,4 +113,5 @@ public class Cinema implements Serializable{
 		this.user = user;
 	}
 
+	
 }

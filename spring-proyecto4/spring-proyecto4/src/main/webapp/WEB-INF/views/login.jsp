@@ -36,6 +36,7 @@
 					
 					
 					<button class = "btn btn-success btn-lg" type = "submit" >Iniciar sesión</button>
+					<a class = "btn btn-primary btn-lg" href="${pageContext.request.contextPath}/register">Registrate</a>
 
 				
 				</form:form>

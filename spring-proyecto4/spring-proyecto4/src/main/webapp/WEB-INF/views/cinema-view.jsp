@@ -20,7 +20,12 @@
 					<p>Schedule: ${cinema.schedule}</p>
 					<p>Room: ${cinema.rooms}</p>
 					<p>PostalCode: ${cinema.postalCode}</p>
-					
+					<p>Movies</p>
+					<ul>
+					<c:forEach items="${cinema.movies}" var="movie">
+						<li><span class="badge bg-primary text-white">${movie.title}</span></li>
+					</c:forEach>
+					</ul>
 					
 			        
 						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas">Volver</a> 

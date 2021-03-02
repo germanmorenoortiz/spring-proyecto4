@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.entities.Cinema;
 import com.example.demo.entities.Movie;
 
-import com.example.demo.entities.User;
+
 import com.example.demo.repository.CinemaRepository;
+import com.example.demo.repository.MovieRepository;
 
 
 @Controller
@@ -22,6 +23,9 @@ public class CinemaController {
 
 	@Autowired
 	private CinemaRepository cinemaRepository;
+	
+	@Autowired
+	private MovieRepository movieRepository;
 	
 	@GetMapping("/cinemas")
 	public String findCinemas(Model model) {
@@ -52,6 +56,7 @@ public class CinemaController {
 		Optional<Cinema> cinemaOpt = cinemaRepository.findById(id);
 		if (cinemaOpt.isPresent()) { // 2. se comprueba que existe un producto para ese id
 			model.addAttribute("cinema", cinemaOpt.get());
+			model.addAttribute("movies", movieRepository.findAll());
 			return "cinema-edit";
 		}
 		model.addAttribute("error", "No existe el producto solicitado");
