@@ -9,13 +9,13 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="${pageContext.request.contextPath}/login">Login<span class="sr-only">(current)</span></a>
-      <c:if test="${user.rol ==´admim´ }">
+      <c:if test="${user.rol =='admim'}">
       <a class="nav-item nav-link" href="${pageContext.request.contextPath}/cinemas">Cinema</a>
       </c:if>
-       <c:if test="${user.rol ==´admim´ }">
+       <c:if test="${user.rol =='admim' }">
       <a class="nav-item nav-link" href="${pageContext.request.contextPath}/users">Users</a>
       </c:if>
-       <c:if test="${user.rol ==´admim´ }">
+       <c:if test="${user.rol =='admim' }">
       <a class="nav-item nav-link" href="${pageContext.request.contextPath}/movies">Movies</a>
       </c:if>
             <a class="nav-item nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>

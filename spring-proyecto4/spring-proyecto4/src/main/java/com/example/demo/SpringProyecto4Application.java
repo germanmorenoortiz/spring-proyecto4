@@ -13,6 +13,7 @@ import com.example.demo.entities.Cinema;
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.User;
 import com.example.demo.repository.CinemaRepository;
+import com.example.demo.repository.MovieRepository;
 import com.example.demo.repository.UserRepository;
 
 
@@ -26,6 +27,8 @@ public class SpringProyecto4Application implements CommandLineRunner{
 	private CinemaRepository cinemaRepository;
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private MovieRepository movieRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringProyecto4Application.class, args);
@@ -66,7 +69,21 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		//List<Movie> movies = Arrays.asList(movie1, movie2);
 		//List<User> user =Arrays.asList(user1,user2);
 		
+		Movie movie1 = new Movie(); 
+		movie1.setTitle("Star Wars");
+		movie1.setDuration(120);
+		movieRepository.save(movie1);
 		
+		Movie movie2 = new Movie(); 
+		movie2.setTitle("James Bond");
+		movie2.setDuration(130);
+		movieRepository.save(movie2);
+		
+		Movie movie3 = new Movie(); 
+		movie3.setTitle("Harry Potter");
+		movie3.setDuration(130);
+		movieRepository.save(movie3);
+
 	}
 
 }
