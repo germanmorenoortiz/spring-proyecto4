@@ -81,6 +81,7 @@ public class MovieController {
 	@PostMapping("/movies")
 	public String editMovie(@ModelAttribute Movie movie, Model model) {
 		movieRepository.save(movie);
-		return "movie-list";
+		//return "movie-list";
+		return "redirect:/movies";
 	}
 }

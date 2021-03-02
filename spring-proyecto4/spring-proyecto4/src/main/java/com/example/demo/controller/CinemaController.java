@@ -28,6 +28,7 @@ public class CinemaController {
 		
 		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
+	
 	}
 	
 	@GetMapping("/cinemas/{id}/view")
@@ -54,7 +55,7 @@ public class CinemaController {
 			model.addAttribute("cinema", cinemaOpt.get());
 			return "cinema-edit";
 		}
-		model.addAttribute("error", "No existe el producto solicitado");
+		model.addAttribute("error", "No existe el cinema solicitado");
 		return "redirect:/cinema";
 	}
 	
@@ -80,6 +81,7 @@ public class CinemaController {
 	@PostMapping("/cinemas")
 	public String editCinema(@ModelAttribute Cinema cinema, Model model) {
 		cinemaRepository.save(cinema);
-		return "cinema-list";
+		//return "cinema-list";
+		return "redirect:/cinemas";
 	}
 }
