@@ -80,6 +80,6 @@ public class CinemaController {
 	@PostMapping("/cinemas")
 	public String editCinema(@ModelAttribute Cinema cinema, Model model) {
 		cinemaRepository.save(cinema);
-		return "cinema-list";
+		return "redirect:/cinemas";
 	}
 }

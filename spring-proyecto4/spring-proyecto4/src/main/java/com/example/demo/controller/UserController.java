@@ -79,6 +79,6 @@ public class UserController {
 	@PostMapping("/users")
 	public String editUser(@ModelAttribute User user, Model model) {
 		userRepository.save(user);
-		return "user-list";
+		return "redirect:/users";
 	}
 }
