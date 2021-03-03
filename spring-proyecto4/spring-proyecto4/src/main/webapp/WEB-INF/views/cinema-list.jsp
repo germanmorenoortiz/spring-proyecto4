@@ -6,7 +6,8 @@
 <head>
 <title>Cinemas List | Awesome App</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="css/cinema.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
@@ -33,8 +34,9 @@
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->
 
 		<p>
+		 <c:if test="${user.rol == 'admin' }">
 			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/cinemas/new">ADD CINEMA</a>
-			<a class = "btn btn-danger" href="${pageContext.request.contextPath}/cinemas/delete/all">DELETE CINEMAS</a>
+			 </c:if>
 			
 		</p>
 	
@@ -73,7 +75,7 @@
 		</table>
 		
 	</div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

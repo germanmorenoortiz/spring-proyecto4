@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <title>Movie  Edition | Movie App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/movie.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
@@ -33,7 +35,7 @@
 						<label for="duration">Duration</label>
 						<form:input path="duration" class="form-control" />
 					</div>
-					
+				
 		
 					<td> 
 						<a class="btn btn-info" href = "${pageContext.request.contextPath}/movies/${movie.id}/view">Ver</a> 
@@ -55,6 +57,7 @@
 			</div>
 		</div>
 	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 

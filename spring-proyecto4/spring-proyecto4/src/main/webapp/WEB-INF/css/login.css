@@ -1,0 +1,22 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+}
+body,html{
+	height: 100%;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
+	background-color: whitesmoke;
+	margin-top: 0px;
+  	background-repeat: no-repeat;
+  	background-position: center;
+ 	 background-size: cover;
+	
+}
+footer{
+	height:100px;
+	text-align: center;
+	background-color: darkgray;
+	margin-top:50px;
+	padding:20px;
+}

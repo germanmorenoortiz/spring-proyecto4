@@ -7,6 +7,8 @@
 <meta charset="UTF-8">
 <title>Cinema View |CinemaApp</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/cinema.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
@@ -23,7 +25,7 @@
 					<p>Movies</p>
 					<ul>
 					<c:forEach items="${cinema.movies}" var="movie">
-						<li><span class="badge bg-primary text-white">${movie.title}</span></li>
+						<li><span class="badge bg-primary text-white">${movie.title},${movie.duration}</span></li>
 					</c:forEach>
 					</ul>
 					
@@ -38,7 +40,7 @@
 		</div>
 	</div>
 	
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

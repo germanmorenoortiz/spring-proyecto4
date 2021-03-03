@@ -5,7 +5,9 @@
 <html>
 <head>
 <title>Movies List | CinemaApp</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/movie.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -33,8 +35,11 @@
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->
 
 		<p>
-			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/movies/new">ADD 	MOVIES</a>
-			<a class = "btn btn-danger" href="${pageContext.request.contextPath}/movies/delete/all">DELETE MOVIES</a>
+		 <c:if test="${user.rol == 'admin' }">
+			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/movies/new">ADD MOVIES</a>
+			 </c:if>
+			
+		
 			
 		</p>
 	
@@ -70,7 +75,7 @@
 		</table>
 		
 	</div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

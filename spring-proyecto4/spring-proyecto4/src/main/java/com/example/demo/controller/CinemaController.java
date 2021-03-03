@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entities.Cinema;
 import com.example.demo.entities.Movie;
-
-
+import com.example.demo.entities.User;
 import com.example.demo.repository.CinemaRepository;
 import com.example.demo.repository.MovieRepository;
 
@@ -65,7 +64,8 @@ public class CinemaController {
 	
 	@GetMapping("/cinemas/search/{postalCode}")
 	public String filterCinemasByPostalCode(Model model) {
-//		model.addAttribute("cinemas", cinemaRepository.findAll());
+	//model.addAttribute("cinemas", cinemaRepository.findAll( cinema.postalCode));
+
 		return "cinema-list";
 	}
 	@GetMapping("/cinemas/new")

@@ -7,7 +7,7 @@
 		        		<div class="col-md-3 footer-about wow fadeInUp">
 		        			<h3>About us</h3>
 		        			<p>
-		        				We are a young company always looking for new and creative ideas to help you with our products in your everyday work.
+		        				We are a cinema app with which we want to provide the service to users so that they can see the nearest cinema by postal code
 		        			</p>
 		        			<p>&copy; Company Inc.</p>
 	                    </div>
