@@ -10,6 +10,7 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
+<c:if test="${user.rol == 'admin' }">
 <div class = "pt-5 container">
 			<h2>Cinema ${cinema.id}</h2>
 			<hr>
@@ -23,7 +24,7 @@
 					<p>Movies</p>
 					<ul>
 					<c:forEach items="${cinema.movies}" var="movie">
-						<li><span class="badge bg-primary text-white">${movie.title}</span></li>
+						<li><span class="badge bg-primary text-white">${movie.title},${movie.duration}</span></li>
 					</c:forEach>
 					</ul>
 					
@@ -37,10 +38,38 @@
 
 		</div>
 	</div>
-	
+	</c:if>
+<c:if test="${user.rol == 'normal' }">
+<div class = "pt-5 container">
+			<h2>Cinema ${cinema.id}</h2>
+			<hr>
+		<div class = " row justify-content-center">
+
+			<div class = "col-md-8 mb-5">
+					<p>Name: ${cinema.name}</p>
+					<p>Schedule: ${cinema.schedule}</p>
+					<p>Room: ${cinema.rooms}</p>
+					<p>PostalCode: ${cinema.postalCode}</p>
+					<p>Movies</p>
+					<ul>
+					<c:forEach items="${cinema.movies}" var="movie">
+						<li><span class="badge bg-primary text-white">${movie.title},${movie.duration}</span></li>
+					</c:forEach>
+					</ul>
+					
+			        
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas">Volver</a> 
+						
+						 
+					
+			</div>
+
+		</div>
+	</div>
+</c:if>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-</body>
+
 </html>

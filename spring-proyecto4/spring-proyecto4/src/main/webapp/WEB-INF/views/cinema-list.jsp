@@ -31,6 +31,7 @@
 		<p>${NOTIFICATION}</p>
 		
 <!-- 		ADMIN PUEDE CREAR CINEMAS -->
+            <c:if test="${user.rol == 'admin' }">
 
 		<p>
 			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/cinemas/new">ADD CINEMA</a>
@@ -71,7 +72,47 @@
 			</c:forEach>
 			
 		</table>
-		
+		</c:if>
+		 <c:if test="${user.rol == 'normal' }">
+
+		<p>
+			
+			
+		</p>
+	
+<!-- 	FILTRO CÓDIGO POSTAL -->
+
+
+
+		<table class = "table table-striped table-bordered">
+			
+			<tr class = "thead-dark">
+				<th>Name</th>
+				<th>Direction</th>
+				<th>Open/Close Hours</th>
+				<th>Rooms</th>
+				<th>Actions</th>
+			</tr>
+			
+			<c:forEach items="${cinemas}" var="cinema">
+			
+				<tr>
+					<td>${cinema.name}</td>
+					<td>${cinema.postalCode}</td>
+					<td>${cinema.schedule}</td>
+					<td>${cinema.rooms}</td>
+							
+					<td> 
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+				
+						 
+					</td>
+				</tr>
+				
+			</c:forEach>
+			
+		</table>
+		</c:if>
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
