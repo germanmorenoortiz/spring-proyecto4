@@ -18,7 +18,9 @@
        <c:if test="${user.rol == 'admin' }">
       <a class="nav-item nav-link" href="${pageContext.request.contextPath}/movies">Movies</a>
       </c:if>
+      <c:if test="${user.rol != null}">
             <a class="nav-item nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>
+      </c:if>
     </div>
   </div>
 </nav>

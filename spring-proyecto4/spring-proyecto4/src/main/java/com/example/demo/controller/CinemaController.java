@@ -65,7 +65,7 @@ public class CinemaController {
 	
 	@GetMapping("/cinemas/search/{postalCode}")
 	public String filterCinemasByPostalCode(Model model) {
-//		model.addAttribute("cinemas", cinemaRepository.findAll());
+		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
 	@GetMapping("/cinemas/new")
