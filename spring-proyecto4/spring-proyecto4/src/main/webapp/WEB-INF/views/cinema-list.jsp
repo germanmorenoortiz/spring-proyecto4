@@ -7,7 +7,8 @@
 <head>
 <title>Cinemas List | Awesome App</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="css/cinema.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="navbar.jsp"></jsp:include>
@@ -85,8 +86,9 @@
          
    <div>
     <form:form action="${pageContext.request.contextPath}/cinemas/search" method="POST" modelAttribute="postalCode"> 
-              <form:input path="postalCode" name="postalCode" id="postalCode" class="form-control me-2"  placeholder="Search" aria-label="Search"/>
+              <form:input path="postalCode" name="postalCode" id="postalCode" placeholder="Search" aria-label="Search"/>
               <button class="btn btn-outline-success" type="submit">Buscar</button>
+             
      </form:form>
    </div>
 

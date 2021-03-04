@@ -44,42 +44,42 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		User user2 = new User("oscar@gmail.com","1234","normal");
 		userRepository.save(user2);
 		
-		Cinema cinema1 = new Cinema();
-		cinema1.setName("Nativo");
-		cinema1.setRooms(4);
-		cinema1.setPostalCode("70874");
-		cinema1.setSchedule("H 10-20");
-		cinemaRepository.save(cinema1);
+		Cinema Nativo = new Cinema();
+		Nativo.setName("Nativo");
+		Nativo.setRooms(4);
+		Nativo.setPostalCode("70874");
+		Nativo.setSchedule("H 10-20");
+		cinemaRepository.save(Nativo);
 		
 		
-		Cinema cinema2 = new Cinema();
-		cinema2.setName("Carrefour");
-		cinema2.setRooms(1);
-		cinema2.setPostalCode("10478");
-		cinema2.setSchedule("H 16-20");
-		cinemaRepository.save(cinema2);
+		Cinema Carrefour = new Cinema();
+		Carrefour.setName("Carrefour");
+		Carrefour.setRooms(1);
+		Carrefour.setPostalCode("10478");
+		Carrefour.setSchedule("H 16-20");
+		cinemaRepository.save(Carrefour);
 		
-		Cinema cinema3 = new Cinema();
-		cinema3.setName("Marte");
-		cinema3.setRooms(7);
-		cinema3.setPostalCode("92547");
-		cinema3.setSchedule("H 9-20");
-		cinemaRepository.save(cinema3);
+		Cinema Marte = new Cinema();
+		Marte.setName("Marte");
+		Marte.setRooms(7);
+		Marte.setPostalCode("92547");
+		Marte.setSchedule("H 9-20");
+		cinemaRepository.save(Marte);
 		
-		Movie movie1 = new Movie(); 
-		movie1.setTitle("Star Wars");
-		movie1.setDuration(120);
-		movieRepository.save(movie1);
+		Movie StarWars = new Movie(); 
+		StarWars.setTitle("Star Wars");
+		StarWars.setDuration(120);
+		movieRepository.save(StarWars);
 		
-		Movie movie2 = new Movie(); 
-		movie2.setTitle("James Bond");
-		movie2.setDuration(130);
-		movieRepository.save(movie2);
+		Movie JamesBond = new Movie(); 
+		JamesBond.setTitle("James Bond");
+		JamesBond.setDuration(130);
+		movieRepository.save(JamesBond);
 		
-		Movie movie3 = new Movie(); 
-		movie3.setTitle("Harry Potter");
-		movie3.setDuration(130);
-		movieRepository.save(movie3);
+		Movie HarryPotter = new Movie(); 
+		HarryPotter.setTitle("Harry Potter");
+		HarryPotter.setDuration(130);
+		movieRepository.save(HarryPotter);
 
 		
 		
