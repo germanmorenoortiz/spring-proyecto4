@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entities.Cinema;
-import com.example.demo.entities.Movie;
-
-
+import com.example.demo.entities.PostalCode;
 import com.example.demo.repository.CinemaRepository;
 import com.example.demo.repository.MovieRepository;
 
@@ -30,6 +30,7 @@ public class CinemaController {
 	@GetMapping("/cinemas")
 	public String findCinemas(Model model) {
 		
+		model.addAttribute("postalCode", new PostalCode());
 		model.addAttribute("cinemas", cinemaRepository.findAll());
 		return "cinema-list";
 	}
@@ -63,9 +64,14 @@ public class CinemaController {
 		return "redirect:/cinema";
 	}
 	
-	@GetMapping("/cinemas/search/{postalCode}")
-	public String filterCinemasByPostalCode(Model model) {
-		model.addAttribute("cinemas", cinemaRepository.findAll());
+	@PostMapping("/cinemas/search")
+	public String filterCinemasByPostalCode(@ModelAttribute("") PostalCode postalCode, Model model ) {
+		if(postalCode.getPostalCode() != null && !postalCode.getPostalCode().equals("") ) {
+			model.addAttribute("cinemas", cinemaRepository.findAllByPostalCode(postalCode.getPostalCode()));
+		}else {
+			model.addAttribute("cinemas", cinemaRepository.findAll());
+		}
+					
 		return "cinema-list";
 	}
 	@GetMapping("/cinemas/new")

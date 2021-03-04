@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,7 +82,13 @@
 		</p>
 	
 <!-- 	FILTRO CÓDIGO POSTAL -->
-
+         
+   <div>
+    <form:form action="${pageContext.request.contextPath}/cinemas/search" method="POST" modelAttribute="postalCode"> 
+              <form:input path="postalCode" name="postalCode" id="postalCode" class="form-control me-2"  placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+     </form:form>
+   </div>
 
 
 		<table class = "table table-striped table-bordered">
@@ -103,7 +110,7 @@
 					<td>${cinema.rooms}</td>
 							
 					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver</a> 
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/cinemas/${cinema.id}/view">Ver Peliculas</a> 
 				
 						 
 					</td>
@@ -114,7 +121,7 @@
 		</table>
 		</c:if>
 	</div>
-
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

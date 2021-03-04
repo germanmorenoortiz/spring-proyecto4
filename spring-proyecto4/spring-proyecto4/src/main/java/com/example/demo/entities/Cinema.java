@@ -35,7 +35,7 @@ public class Cinema implements Serializable{
 	@Column(name="rooms")
 	private Integer rooms;
 	@Column(name ="postalCode")
-	private Integer postalCode;
+	private String postalCode;
 	
 	@ManyToMany
 	@JoinTable(name = "cinema_movie",
@@ -46,7 +46,7 @@ public class Cinema implements Serializable{
 	private List<User> user =new ArrayList<User>();
 	public Cinema() {}
 
-	public Cinema(String name, Direction direction, String schedule, Integer rooms, Integer postalCode,
+	public Cinema(String name, Direction direction, String schedule, Integer rooms, String postalCode,
 			List<Movie> movies, List<User> user) {
 		super();
 		this.name = name;
@@ -89,11 +89,11 @@ public class Cinema implements Serializable{
 		this.rooms = rooms;
 	}
 
-	public Integer getPostalCode() {
+	public String getPostalCode() {
 		return postalCode;
 	}
 
-	public void setPostalCode(Integer postalCode) {
+	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 

@@ -47,7 +47,7 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		Cinema cinema1 = new Cinema();
 		cinema1.setName("Nativo");
 		cinema1.setRooms(4);
-		cinema1.setPostalCode(70874);
+		cinema1.setPostalCode("70874");
 		cinema1.setSchedule("H 10-20");
 		cinemaRepository.save(cinema1);
 		
@@ -55,14 +55,14 @@ public class SpringProyecto4Application implements CommandLineRunner{
 		Cinema cinema2 = new Cinema();
 		cinema2.setName("Carrefour");
 		cinema2.setRooms(1);
-		cinema2.setPostalCode(10478);
+		cinema2.setPostalCode("10478");
 		cinema2.setSchedule("H 16-20");
 		cinemaRepository.save(cinema2);
 		
 		Cinema cinema3 = new Cinema();
 		cinema3.setName("Marte");
 		cinema3.setRooms(7);
-		cinema3.setPostalCode(92547);
+		cinema3.setPostalCode("92547");
 		cinema3.setSchedule("H 9-20");
 		cinemaRepository.save(cinema3);
 		
